@@ -1,0 +1,483 @@
+/* 设计稿宽 750 */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+}
+/* 表单提示文字颜色 */
+::-webkit-input-placeholder {
+  color: #ee9918;
+}
+/* 大盒子公共样式 */
+.pg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* 定位居中 */
+.ps {
+  position: absolute;
+}
+.dn {
+  display: none;
+}
+img {
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select {
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+li {
+  list-style: none;
+}
+div {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img[src=""] {
+  display: none;
+}
+.inner-box {
+  width: 100vw;
+  height: 200vw;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-left: 0;
+  margin-top: -100vw;
+}
+/* ********************************************** 自定义样式开始 *******************************************************/
+.loading .ps {
+  top: 126.66666667vw;
+  left: 0;
+  width: 100%;
+}
+.loading .ps ul {
+  display: flex;
+  justify-content: center;
+}
+.loading .ps ul li {
+  margin: 0 2.66666667vw;
+  width: 1.86666667vw;
+  height: 1.86666667vw;
+  background: #fff;
+  border: 0.66666667vw solid #0e8363;
+  border-radius: 100%;
+}
+.loading .ps ul li:nth-child(1) {
+  animation: loading 0.3s linear infinite alternate;
+}
+.loading .ps ul li:nth-child(2) {
+  animation: loading 0.3s 0.15s linear infinite alternate;
+}
+.loading .ps ul li:nth-child(3) {
+  animation: loading 0.3s 0.3s linear infinite alternate;
+}
+.loading .ps p {
+  margin: 1.33333333vw 0 0 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 4.26666667vw;
+}
+.homepage .title {
+  top: 22.66666667vw;
+  left: 50%;
+  width: 80vw;
+  margin-left: -40vw;
+  margin-top: 0;
+  text-align: center;
+  transition: top 1s;
+}
+.homepage .title img:nth-child(1) {
+  width: 48.8vw;
+  margin-bottom: 5.33333333vw;
+  animation: zoom 1s linear 1;
+}
+.homepage .title img:nth-child(2) {
+  width: 80vw;
+}
+.homepage .title .shake {
+  animation: shake 3s linear infinite alternate;
+}
+.homepage .gender {
+  top: 150.13333333vw;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: moveUp 0.5s 1s linear 1 forwards;
+}
+.homepage .gender .male,
+.homepage .gender .female {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.66666667vw;
+  width: 26.4vw;
+}
+.homepage .gender .male .ps,
+.homepage .gender .female .ps {
+  top: 50%;
+  left: 50%;
+  width: 12.8vw;
+  margin-left: -6.4vw;
+  margin-top: -3.33333333vw;
+}
+.homepage .gender .upload {
+  margin: 2.66666667vw auto 0;
+  width: 54.8vw;
+  animation: zoom2 1s linear infinite alternate;
+}
+.homepage .gender .tips {
+  top: -10.66666667vw;
+  left: 50%;
+  width: 54.26666667vw;
+  margin-left: -27.13333333vw;
+  margin-top: 0;
+}
+.homepage .gender .tips .tipsbg {
+  transform: rotateY(180deg);
+}
+.homepage .gender .tips .ps {
+  top: 50%;
+  left: 50%;
+  width: 48.53333333vw;
+  margin-left: -24.26666667vw;
+  margin-top: -2.93333333vw;
+}
+.homepage .uploadImg {
+  top: 85.33333333vw;
+  left: 50%;
+  width: 73.33333333vw;
+  height: 86.66666667vw;
+  margin-left: -36.66666667vw;
+  margin-top: 0;
+  background: #ffffff;
+  text-align: center;
+}
+.homepage .uploadImg .tips {
+  margin-top: 4vw;
+  width: 62.66666667vw;
+}
+.homepage .uploadImg .enlarge {
+  opacity: 0;
+  animation: moveUp 0.5s 1s linear 1 forwards;
+}
+.homepage .uploadImg .userImg {
+  overflow: hidden;
+  margin: 2.66666667vw auto 0;
+  width: 67.33333333vw;
+  height: 67.33333333vw;
+}
+.homepage .uploadImg .determine1 {
+  bottom: -14.66666667vw;
+  left: 50%;
+  width: 26.4vw;
+  margin-left: -13.2vw;
+  margin-top: 0;
+  animation: zoom2 1s linear infinite alternate;
+}
+.photograph {
+  overflow: hidden;
+  background: url('../img/bg3.png') no-repeat top / 100% auto;
+}
+.photograph .return {
+  top: 22.66666667vw;
+  left: 0;
+  width: 11.06666667vw;
+}
+.photograph .people {
+  top: 69.33333333vw;
+  left: 0;
+  width: 100vw;
+}
+.photograph .people .man {
+  transition: transform 1s;
+}
+.photograph .people .shifLeft {
+  transform: translateX(-100%);
+}
+.photograph .people .ps {
+  top: 58.66666667vw;
+  left: 34vw;
+  width: 36.13333333vw;
+}
+.photograph .frame {
+  top: 12.53333333vw;
+  left: 50%;
+  width: 84vw;
+  margin-left: -42vw;
+  margin-top: 0;
+}
+.photograph .scene {
+  top: 139.2vw;
+  left: 50%;
+  width: 83%;
+  margin-left: -41.5%;
+  margin-top: 0;
+  height: 32vw;
+  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-size: 25px;
+}
+.photograph .scene .swiper-button-next {
+  outline: none;
+  right: -6.66666667vw;
+  pointer-events: auto;
+  animation: shiftLeft 1s linear infinite alternate;
+}
+.photograph .scene .swiper-button-prev {
+  outline: none;
+  left: -6.66666667vw;
+  pointer-events: auto;
+  animation: shiftLeft 1s -1s linear infinite alternate;
+}
+.photograph .scene .shutter {
+  margin: 4vw auto 0;
+  width: 53.86666667vw;
+  animation: zoom2 1s linear infinite alternate;
+}
+.found {
+  z-index: -1;
+}
+.found .people {
+  top: 42.66666667vw;
+  left: 0;
+  width: 100vw;
+}
+.poster {
+  background: #000000;
+  transition: all 0.6s;
+}
+.poster .posterbg {
+  opacity: 0.6;
+}
+.poster .photobg {
+  top: 18.93333333vw;
+  left: 50%;
+  width: 81.06666667vw;
+  margin-left: -40.53333333vw;
+  margin-top: 0;
+}
+.poster .photobg .photo {
+  overflow: hidden;
+  top: 2.66666667vw;
+  left: 50%;
+  width: 76vw;
+  height: 110.8vw;
+  margin-left: -38vw;
+  margin-top: 0;
+}
+.poster .photobg .photo img {
+  top: -12.53333333vw;
+  left: 50%;
+  width: 100vw;
+  margin-left: -46.66666667vw;
+  margin-top: 0;
+}
+.poster .photobg .addMessage {
+  bottom: 7%;
+  left: 50%;
+  width: 90%;
+  height: 9.33333333vw;
+  margin-left: -45%;
+  margin-top: 0;
+}
+.poster .photobg ul {
+  left: 3%;
+  bottom: 2.13333333vw;
+}
+.poster .photobg ul .sceneName,
+.poster .photobg ul .date {
+  display: inline-block;
+  color: #80899b;
+  font-size: 3.46666667vw;
+  font-family: 'Microsoft YaHei';
+}
+.poster .photobg ul .date {
+  margin: 0 0 0 2.66666667vw;
+}
+.poster .photobg .tips,
+.poster .photobg .determine2 {
+  bottom: -12%;
+  left: 50%;
+  width: 53.86666667vw;
+  margin-left: -26.93333333vw;
+  margin-top: 0;
+  animation: zoom2 1s linear infinite alternate;
+}
+.poster .photobg .determine2 {
+  width: 26.4vw;
+  margin-left: -13.2vw;
+  margin-top: 0;
+}
+.poster .result {
+  top: 18.93333333vw;
+  left: 50%;
+  width: 81.06666667vw;
+  margin-left: -40.53333333vw;
+  margin-top: 0;
+  pointer-events: auto;
+}
+.poster .return {
+  top: 22.66666667vw;
+  left: 0;
+  width: 11.06666667vw;
+}
+.graduation .messagebox {
+  top: 20%;
+  left: 50%;
+  width: 73.33333333vw;
+  margin-left: -36.66666667vw;
+  margin-top: 0;
+  background: #ffffff;
+  border-radius: 5.33333333vw;
+  text-align: center;
+}
+.graduation .messagebox .title {
+  margin: 2.66666667vw 0 0 0;
+  width: 15.86666667vw;
+}
+.graduation .messagebox ul li {
+  position: relative;
+  margin: 3.46666667vw 0;
+}
+.graduation .messagebox ul li .circular {
+  position: absolute;
+  top: 50%;
+  left: 2.66666667vw;
+  width: 3.46666667vw;
+  margin-left: 0;
+  margin-top: -1.73333333vw;
+}
+.graduation .messagebox ul li .text {
+  width: 52.8vw;
+  opacity: 0.6;
+}
+.graduation .messagebox ul .current .circular {
+  width: 4.4vw;
+}
+.graduation .messagebox ul .current .text {
+  opacity: 1;
+}
+.graduation .determine3 {
+  top: 165.6vw;
+  left: 50%;
+  width: 26.4vw;
+  margin-left: -13.2vw;
+  margin-top: 0;
+  animation: zoom2 1s linear infinite alternate;
+}
+.bgm {
+  top: 33.33333333vw;
+  left: 0;
+  width: 11.06666667vw;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.mask ul {
+  width: 100%;
+  height: 1.86666667vw;
+  top: 50%;
+  left: 0;
+  margin-left: 0;
+  margin-top: -0.93333333vw;
+  display: flex;
+  justify-content: center;
+}
+.mask ul li {
+  margin: 0 2.66666667vw;
+  width: 1.86666667vw;
+  height: 1.86666667vw;
+  background: #fff;
+  border: 0.66666667vw solid #0e8363;
+  border-radius: 100%;
+}
+.mask ul li:nth-child(1) {
+  animation: loading 0.3s linear infinite alternate;
+}
+.mask ul li:nth-child(2) {
+  animation: loading 0.3s 0.15s linear infinite alternate;
+}
+.mask ul li:nth-child(3) {
+  animation: loading 0.3s 0.3s linear infinite alternate;
+}
+@media screen and (max-height: 181.33vw) {
+  .homepage .title {
+    transform: scale(0.9) translateY(-12vw);
+  }
+  .homepage .gender {
+    top: 120vw;
+  }
+  .homepage .uploadImg {
+    top: 65vw;
+    transform: scale(0.9);
+  }
+  .homepage .uploadImg .determine1 {
+    bottom: -12.666667vw;
+  }
+  .photograph .frame {
+    top: -2vw;
+    transform: scale(0.9);
+  }
+  .photograph .people {
+    top: 30vw;
+  }
+  .photograph .scene {
+    top: 115.2vw;
+    transform: scale(0.9);
+  }
+  .poster .photobg,
+  .poster .result {
+    top: 4%;
+    transform: scale(0.9);
+  }
+  .graduation > img {
+    margin-top: -12vw;
+  }
+  .graduation .messagebox {
+    top: 22vw;
+  }
+  .graduation .determine3 {
+    top: 146vw;
+  }
+}
+@media screen and (max-height: 190.13vw) and (min-height: 181.33vw) {
+  .homepage .title {
+    transform: translateY(-5.33333333vw);
+  }
+  .photograph .scene {
+    top: 132vw;
+  }
+  .photograph .people .ps {
+    top: 51vw;
+  }
+  .photograph .frame {
+    top: 6.5vw;
+  }
+  .homepage .uploadImg {
+    top: 78.333333vw;
+  }
+}

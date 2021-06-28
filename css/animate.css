@@ -1,0 +1,66 @@
+@keyframes loading {
+  0%,
+  66% {
+    background: #ffffff;
+  }
+  100% {
+    background: #6ff0ff;
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0%,
+  60% {
+    transform: rotate(0);
+  }
+  70%,
+  90% {
+    transform: rotate(10deg);
+  }
+  80%,
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+  50%,
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes zoom2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes shiftLeft {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
